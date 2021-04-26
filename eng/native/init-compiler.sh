@@ -24,6 +24,7 @@ CC=
 CXX=
 
 if [[ "$compiler" == "gcc" ]]; then cxxCompiler="g++"; fi
+if [[ "$compiler" == clang* ]]; then cxxCompiler="clang++${compiler#clang}"; fi
 
 check_version_exists() {
     desired_version=-1

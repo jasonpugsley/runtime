@@ -13,6 +13,7 @@
     <OfficialBuildRID Include="linux-x64" />
     <OfficialBuildRID Include="linux-musl-x64" />
     <OfficialBuildRID Include="win-x64"/>
+    <OfficialBuildRID Include="freebsd-x64" />
   </ItemGroup>
 
 </Project>

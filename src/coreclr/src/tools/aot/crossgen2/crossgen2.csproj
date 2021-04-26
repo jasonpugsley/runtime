@@ -12,7 +12,7 @@
     <OutputPath>$(BinDir)/crossgen2</OutputPath>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
-    <RuntimeIdentifiers>linux-x64;linux-musl-x64;win-x64</RuntimeIdentifiers>
+    <RuntimeIdentifiers>linux-x64;linux-musl-x64;win-x64;freebsd-x64</RuntimeIdentifiers>
     <Configurations>Debug;Release;Checked</Configurations>
   </PropertyGroup>
 
@@ -53,6 +53,7 @@
     <LibraryNameExtension Condition="$([MSBuild]::IsOsPlatform('WINDOWS'))">.dll</LibraryNameExtension>
     <LibraryNameExtension Condition="$([MSBuild]::IsOsPlatform('LINUX'))">.so</LibraryNameExtension>
     <LibraryNameExtension Condition="$([MSBuild]::IsOsPlatform('OSX'))">.dylib</LibraryNameExtension>
+    <LibraryNameExtension Condition="$([MSBuild]::IsOsPlatform('FREEBSD'))">.so</LibraryNameExtension>
 
     <JitInterfaceLibraryName>$(LibraryNamePrefix)jitinterface$(LibraryNameExtension)</JitInterfaceLibraryName>
   </PropertyGroup>

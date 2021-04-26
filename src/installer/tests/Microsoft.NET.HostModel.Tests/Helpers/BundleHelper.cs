@@ -103,6 +103,7 @@ namespace BundleTests.Helpers
                 "win" => OSPlatform.Windows,
                 "osx" => OSPlatform.OSX,
                 "linux" => OSPlatform.Linux,
+                "freebsd" => OSPlatform.FreeBSD,
                 _ => throw new ArgumentException(nameof(runtimeIdentifier))
             };
         }
